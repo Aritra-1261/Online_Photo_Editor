@@ -53,14 +53,6 @@ body{
     position: relative;
     margin-top: 5px;
 }
-.flip-buttons{
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-}
-.flip-buttons .flip-option{
-    margin-top: 10px;
-}
 .result{
     position: relative;
     display: flex;
@@ -98,6 +90,7 @@ input[type="file"]{
 
 .image-preview {
 	display: flex;
+    top:3px;
 	justify-content: center;
 	margin-top: 20px;
 }
@@ -137,6 +130,8 @@ input[type="file"]{
 }
 @media screen and (max-width: 620px) {
     .wrapper{
+        margin-top:110px;
+        max-height: fit-content;
         width: 95vw;
         grid-template-columns: 1fr;
         padding: 30px 20px;
@@ -147,16 +142,10 @@ input[type="file"]{
         transform: rotate(-90deg) translateY(19vw);
     }
     #canvas{
+        max-height: 30vh;
         width: 60vw;
     }
     .editor{
         grid-row: 2;
-    }
-    .flip-buttons{
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .flip-buttons .flip-option{
-        margin-top: 0;
     }
 }
