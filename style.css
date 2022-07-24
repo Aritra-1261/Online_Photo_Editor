@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Rubik",sans-serif;
+}
+body{
+    background-color: #d3e8f5;
+}
+.float_name{
+    background-color: #02ee6c;
+    font-size: 25px;
+    position: fixed;
+    padding: 6px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #2e2e2e;
+    top: 50%;
+    right:0;
+    margin: 3px;
+    z-index: 9999999;
+    transform: rotate(-90deg) translateY(9vw);
+}
+.wrapper{
+    width: 85vw;
+    min-height: 50vmin;
+    padding: 50px 30px;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+}
+.editor{
+    min-height: 35vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+}
+.editor label{
+    font-size: 2.8vmin;
+    color: #2a292a;
+    font-weight: 400;
+}
+.editor input[type="range"]{
+    display: block;
+    width: 100%;
+    position: relative;
+    margin-top: 5px;
+}
+.flip-buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.flip-buttons .flip-option{
+    margin-top: 10px;
+}
+.result{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.image-container{
+    display: none;
+}
+input[type="file"]{
+    display: none;
+}
+.result label{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 220px;
+    background-color: #025bee;
+    color: #ffffff;
+    text-align: center;
+    padding: 16px 0;
+    border-radius: 5px;
+    font-size: 2.8vmin;
+    font-weight: 400;
+    cursor: pointer;
+}
+#sourceImage,
+.image-controls,
+.image-save {
+    position: relative;
+	display: none;
+    text-align: center;
+}
+
+.image-preview {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+.mybutton{
+    position: relative;
+    margin: 0 auto;
+    width: 120px;
+    background-color: #025bee;
+    color: #ffffff;
+    text-align: center;
+    padding: 16px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 2.8vmin;
+    font-weight: 400;
+    cursor: pointer;
+}
+.mybutton1{
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 3px;
+    width: 120px;
+    background-color: #02ee6c;
+    color: #ffffff;
+    text-align: center;
+    padding: 16px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 2.5vmin;
+    font-weight: 400;
+    cursor: pointer;
+}
+#canvas {
+	max-height: 420px;
+	object-fit: contain;
+}
+@media screen and (max-width: 620px) {
+    .wrapper{
+        width: 95vw;
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+        gap:  10px;
+    }
+    .float_name{
+        font-size: small;
+        transform: rotate(-90deg) translateY(19vw);
+    }
+    #canvas{
+        width: 60vw;
+    }
+    .editor{
+        grid-row: 2;
+    }
+    .flip-buttons{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .flip-buttons .flip-option{
+        margin-top: 0;
+    }
+}

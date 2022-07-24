@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    	<!-- Compiled and minified JavaScript -->
+</head>
+<body>
+    <div class="float_name">ONLINE PHOTO EDITOR</div>
+    <div class="wrapper">
+        <div class="editor">
+            <div class="filter">
+                <label for="brightnessSlider">Brightness</label>
+                <input id="brightnessSlider"type="range" value="100"min="0" max="300"onchange="applyFilter()">
+            </div>
+            <div class="filter">
+                <label for="contrastSlider">Contrast</label>
+                <input id="contrastSlider"type="range" value="100"min="0" max="200"onchange="applyFilter()">
+            </div>
+            <div class="filter">
+                <label for="grayscaleSlider">Grayscale</label>
+                <input id="grayscaleSlider"type="range" value="0"min="0" max="100"onchange="applyFilter()">
+            </div>
+            <div class="filter">
+                <label for="saturationSlider">Saturation</label>
+                <input id="saturationSlider"type="range" value="100"min="0" max="300"onchange="applyFilter()">
+            </div>
+            <div class="filter">
+                    <label for="hueRotateSlider">Hue-Rotate</label>
+                    <input id="hueRotateSlider"type="range" value="0"min="0" max="360"onchange="applyFilter()">
+            </div>
+            <div class="filter">
+                <label for="sepiaSlider">Sepia</label>
+                <input id="sepiaSlider"type="range" value="0"min="0" max="200"onchange="applyFilter()">
+            </div>
+            <div class="flip-buttons">
+                <br>
+                <br>
+                <!-- Buttons that will be used to change
+                the values to preset ones -->
+                <div class="preset-filters">
+                    <h2>Preset Filters</h2>
+                    <br>
+                    <br>
+                    <button class="mybutton1" onclick="brightenFilter()">Brighten</button>
+                    <button class="mybutton1"onclick="bwFilter()">Black & White</button>
+                    <button class="mybutton1"onclick="funkyFilter()">Funky</button>
+                    <button class="mybutton1"onclick="vintageFilter()">Vintage</button>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="result">
+                <img id="sourceImage" crossorigin="anonymous">
+                <div class="image-preview">
+                    <canvas id="canvas" height="0"></canvas>
+                </div>
+            <input type="file" id="upload-button" accept="image/*" onchange="uploadImage(event)">
+            <label for="upload-button">Choose An Image</label>
+            <a id="link"></a>
+            <ul class="image-save">
+				<button class="mybutton"
+						onclick="saveImage()">
+				Save
+				</button>
+				<button class="mybutton"
+						onclick="resetImage()">
+				Reset
+				</button>
+			</ul>
+        </div>
+    </div>
+
+<!-- Load the script for the editor -->
+<script src="app.js"></script>
+</body>
+</html>
