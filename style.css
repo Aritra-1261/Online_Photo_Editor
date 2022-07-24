@@ -123,6 +123,7 @@ input[type="file"]{
     background-color: #02ee6c;
     color: #ffffff;
     text-align: center;
+    font-weight: bold;
     padding: 16px 0;
     border-radius: 5px;
     border: none;
